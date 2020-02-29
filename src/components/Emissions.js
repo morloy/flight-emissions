@@ -1,5 +1,7 @@
 import React from "react"
 
+const format = n => Math.round(n).toLocaleString()
+
 export const Emissions = ({ co2, distance, eur, usd }) => {
   if (co2 === 0)
     return (
@@ -7,10 +9,10 @@ export const Emissions = ({ co2, distance, eur, usd }) => {
     )
   return (
     <div>
-      <p>CO2: {co2}</p>
-      <p>Distance: {distance}</p>
-      <p>EUR: {eur}</p>
-      <p>USD: {usd}</p>
+      <p>CO2: {format(co2)} kg</p>
+      <p>Distance: {format(distance)} km</p>
+      <p>EUR: {format(eur)}</p>
+      <p>USD: {format(usd)}</p>
     </div>
   )
 }
