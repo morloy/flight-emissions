@@ -1,13 +1,11 @@
 import React from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { EmissionForm } from "../components/EmissionForm"
+import { Layout, SEO, Introduction } from "../components"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <EmissionForm />
+    <SEO />
+    <Introduction />
   </Layout>
 )
 
