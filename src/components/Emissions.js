@@ -1,6 +1,6 @@
 import React from "react"
 
-const format = n => Math.round(n).toLocaleString()
+const format = n => Intl.NumberFormat().format(Math.round(n))
 
 export const Emissions = ({ co2, distance, eur, usd }) => {
   if (co2 === 0)
