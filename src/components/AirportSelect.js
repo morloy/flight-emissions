@@ -35,7 +35,7 @@ export const AirportSelect = props => {
       getSuggestionValue={getAirportName}
       renderSuggestion={renderSuggestion}
       onSuggestionSelected={selectSuggestion}
-      inputProps={{ value, onChange }}
+      inputProps={{ value, onChange, placeholder: props.placeholder }}
     />
   )
 }
