@@ -1,4 +1,5 @@
 import React from "react"
+import { Value } from "./Value"
 
 const format = n => Intl.NumberFormat().format(Math.round(n))
 
@@ -9,10 +10,11 @@ export const Emissions = ({ co2, distance, eur, usd }) => {
     )
   return (
     <div>
-      <p>CO2: {format(co2)} kg</p>
-      <p>Distance: {format(distance)} km</p>
-      <p>EUR: {format(eur)}</p>
-      <p>USD: {format(usd)}</p>
+      <Value label="This flight costs you">€{format(eur)}</Value>
+      <Value label="Distance">{format(distance)} km</Value>
+      <Value label="Emissions">
+        {format(co2)} kg CO<sub>2eq</sub>
+      </Value>
     </div>
   )
 }

@@ -1,11 +1,12 @@
 import React from "react"
 
-import { Layout, SEO, Introduction } from "../components"
+import { Layout, SEO, Introduction, Calculator } from "../components"
 
 const IndexPage = () => (
   <Layout>
     <SEO />
     <Introduction />
+    <Calculator />
   </Layout>
 )
 

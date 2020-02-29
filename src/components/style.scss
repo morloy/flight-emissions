@@ -1,12 +1,27 @@
 $font-size: 1.3rem;
+$font-family: Raleway;
+$font-family-emph: "Fredoka One";
+$spacer: 1rem;
+
+$color-primary: #f9ed69;
+$color-secondary: #f08a5d;
 
 $color-text: #212529;
+$color-background: #fbf3f0;
+$border-radius: 1rem;
+$border-radius-box: $border-radius * 2;
 
-body {
+body,
+input {
   font-family: Raleway;
   font-size: $font-size;
   line-height: 1.3;
   color: $color-text;
+}
+
+img {
+  display: block;
+  margin: auto;
 }
 
 .container {
@@ -19,34 +34,122 @@ body {
 
 h1 {
   font-size: $font-size * 2;
-  font-family: "Fredoka One";
+  font-family: $font-family-emph;
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: $spacer * 2;
+  margin-bottom: $spacer * 2;
 }
 .note {
   font-size: $font-size * 0.8;
 }
 
-.media {
+.row {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+.col {
+  flex: 1;
+  padding: $spacer * 2;
+}
+.col-6 {
+  flex: 0 0 50%;
+  padding: $spacer * 2;
+}
+.col-reverse {
+  order: -1;
+}
 
+.media {
   img {
     width: 60%;
-    display: block;
-    margin: auto;
+  }
+}
+
+.calculator {
+  img {
+    width: 80%;
+  }
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 3px solid $color-primary;
+    padding: $spacer * 0.7;
+    border-radius: $border-radius;
+  }
+  input:focus {
+    outline: none !important;
   }
 
-  .media-image {
-    flex: 1;
-    padding: 2rem;
+  .react-autosuggest__input--open {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
-  .media-content {
-    flex: 1;
-    padding: 2rem;
+
+  .col-6 {
+    padding-top: $spacer;
   }
-  .media-reverse {
-    order: -1;
+
+  .emissions {
+    background-color: $color-background;
+    padding: $spacer * 3;
+    border-top-left-radius: $border-radius-box;
+    border-top-right-radius: $border-radius-box;
   }
+  form {
+    padding: $spacer * 1;
+    background-color: $color-background;
+    border-top-left-radius: $border-radius-box;
+    border-bottom-left-radius: $border-radius-box;
+    border-bottom-right-radius: $border-radius-box;
+  }
+}
+
+.value {
+  font-family: $font-family-emph;
+  font-size: $font-size * 1.6;
+  margin-bottom: $spacer;
+
+  .label {
+    font-family: $font-family;
+    font-size: $font-size;
+    margin-bottom: $spacer * 0.7;
+  }
+}
+
+.react-autosuggest__container {
+  position: relative;
+}
+
+.react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.react-autosuggest__suggestions-container--open {
+  display: block;
+  position: absolute;
+  bottom: $spacer * 3.2;
+  box-sizing: border-box;
+  width: 100%;
+  border: 3px solid $color-primary;
+  border-bottom: none;
+  background-color: #fff;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  z-index: 2;
+}
+
+.react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.react-autosuggest__suggestion {
+  cursor: pointer;
+  padding: $spacer;
+}
+
+.react-autosuggest__suggestion--highlighted {
+  background-color: $color-background;
 }

@@ -11,7 +11,7 @@ const fetchAirports = async query => {
     `${apiUrl}?locale=en&query=${encodeURIComponent(query)}`
   )
   const airports = await res.json()
-  return airports
+  return airports.slice(0, 5).reverse()
 }
 
 const renderSuggestion = airpot => <span>{getAirportName(airpot)}</span>
@@ -35,7 +35,7 @@ export const AirportSelect = props => {
       getSuggestionValue={getAirportName}
       renderSuggestion={renderSuggestion}
       onSuggestionSelected={selectSuggestion}
-      inputProps={{ value, onChange, placeholder: props.placeholder }}
+      inputProps={{ ...props, value, onChange }}
     />
   )
 }
