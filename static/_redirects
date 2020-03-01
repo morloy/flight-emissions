@@ -1,2 +1,2 @@
-/  /eur     302  Country=de,ch
+/  /eur     302  Country=al,ad,am,at,by,be,ba,bg,ch,cy,cz,de,dk,ee,es,fo,fi,fr,gb,ge,gi,gr,hu,hr,ie,is,it,li,lt,lu,lv,mc,mk,mt,no,nl,pl,pt,ro,ru,se,si,sk,sm,tr,ua,va
 /api/* https://co2offset.atmosfair.de/api/:splat 200
