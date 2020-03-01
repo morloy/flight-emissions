@@ -20,7 +20,10 @@ export const AirportSelect = props => {
   const [suggestions, setSuggestions] = useState([])
   const [value, setValue] = useState("")
 
-  const onChange = (event, { newValue, ...props }) => setValue(newValue)
+  const onChange = (event, { newValue }) => {
+    setValue(newValue)
+    if (!newValue) props.onChange("")
+  }
   const clearSuggestions = () => setSuggestions([])
   const getSuggestions = async ({ value }) =>
     setSuggestions(await fetchAirports(value))
