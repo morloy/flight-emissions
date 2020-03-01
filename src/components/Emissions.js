@@ -1,5 +1,6 @@
 import React from "react"
 import { Value } from "./Value"
+import { isEuro, price } from "./lib"
 
 const Loader = () => <p>Loading…</p>
 const Explanation = () => (
@@ -7,8 +8,8 @@ const Explanation = () => (
     <li>Enter “Departure” airport</li>
     <li>Enter “Arrival” airport</li>
     <li>
-      Learn how much you would have to pay for a roundtrip at a carbon price of
-      $200
+      Learn how much you would have to pay for a roundtrip at a carbon price of{" "}
+      {price}
     </li>
   </ol>
 )
@@ -16,8 +17,6 @@ const Explanation = () => (
 export const Emissions = ({ emissions, isLoading }) => {
   if (isLoading) return <Loader />
   if (!emissions) return <Explanation />
-
-  const isEuro = document.location.pathname === "/eur/"
 
   const { co2, distance, eur, usd } = emissions
   if (co2 === 0)

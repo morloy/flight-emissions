@@ -2,6 +2,7 @@ import React from "react"
 
 import { Media } from "./Media"
 import { Url } from "./Url"
+import { price } from "./lib"
 
 export const Introduction = () => (
   <section className="introduction">
@@ -14,7 +15,7 @@ export const Introduction = () => (
       </p>
       <p>
         In 2018, the German Environment Agency estimated the damage for one ton
-        of CO2 emission with a cost of $200.
+        of CO2 emission with a cost of {price}.
       </p>
       <div className="note">
         Source:{" "}
@@ -35,8 +36,8 @@ export const Introduction = () => (
         don’t do it, it might be your own children.
       </p>
       <p>
-        Scroll down to learn how much flying would cost you at $200 per ton of
-        CO
+        Scroll down to learn how much flying would cost you at {price} per ton
+        of CO
         <sub>2</sub> 👇
       </p>
     </Media>
