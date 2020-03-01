@@ -69,10 +69,8 @@ h1 {
   order: -1;
 }
 
-.media {
-  img {
-    width: 60%;
-  }
+.media img {
+  width: 60%;
 }
 
 .calculator {
@@ -161,4 +159,19 @@ h1 {
 
 .react-autosuggest__suggestion--highlighted {
   background-color: $color-background;
+}
+
+.conclusion {
+  .row {
+    align-items: start;
+  }
+  .media {
+    a img {
+      padding-top: $spacer * 2;
+      width: 70%;
+    }
+    img {
+      width: 100%;
+    }
+  }
 }

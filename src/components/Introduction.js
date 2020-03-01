@@ -37,7 +37,11 @@ export const Introduction = () => (
         Remember, someone has to repair the damage to our environment. If you
         don’t do it, it might be your own children.
       </p>
-      <p>Use the emission calculator to find out!</p>
+      <p>
+        Scroll down to learn how much flying would cost you at €180 per ton of
+        CO
+        <sub>2</sub> 👇
+      </p>
     </Media>
   </div>
 )
