@@ -1,5 +1,7 @@
 import React from "react"
 
-export const Url = props => (
-  <a target="_blank" rel="noopener noreferrer" {...props} />
+export const Url = ({ href, children }) => (
+  <a target="_blank" rel="noopener noreferrer" href={href}>
+    {children}
+  </a>
 )

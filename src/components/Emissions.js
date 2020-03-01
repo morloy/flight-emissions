@@ -1,8 +1,6 @@
 import React from "react"
 import { Value } from "./Value"
 
-const format = n => Intl.NumberFormat().format(Math.round(n))
-
 const Loader = () => <p>Loading…</p>
 const Explanation = () => (
   <ol>
@@ -26,11 +24,18 @@ export const Emissions = ({ emissions, isLoading }) => {
     )
   return (
     <>
-      <Value label="This roundtrip costs you">€{format(eur)}</Value>
-      <Value label="Distance">{format(distance)} km</Value>
-      <Value label="Emissions">
-        {format(co2)} kg CO<sub>2eq</sub>
-      </Value>
+      <Value label="This roundtrip costs you" value={eur} prefix="€" />
+      <Value label="Distance" value={distance} suffix=" km" />
+      <Value
+        label="Emissions"
+        value={co2}
+        suffix={
+          <>
+            {" "}
+            kg CO<sub>2eq</sub>
+          </>
+        }
+      />
     </>
   )
 }
