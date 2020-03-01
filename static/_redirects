@@ -1,2 +1,2 @@
-/  /?eur     302  Country=de,ch
+/  /eur     302  Country=de,ch
 /api/* https://co2offset.atmosfair.de/api/:splat 200

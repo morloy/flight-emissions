@@ -17,7 +17,7 @@ export const Emissions = ({ emissions, isLoading }) => {
   if (isLoading) return <Loader />
   if (!emissions) return <Explanation />
 
-  const isEuro = document.location.search === "?eur"
+  const isEuro = document.location.pathname === "/eur"
 
   const { co2, distance, eur, usd } = emissions
   if (co2 === 0)
