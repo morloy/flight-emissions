@@ -1,1 +1,1 @@
-/api https://co2offset.atmosfair.de 200
+/api/* https://co2offset.atmosfair.de/api/:splat 200
