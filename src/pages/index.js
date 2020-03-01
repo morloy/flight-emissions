@@ -10,7 +10,7 @@ import {
 
 const IndexPage = () => (
   <Layout>
-    <SEO />
+    <SEO lang="en" />
     <Introduction />
     <Calculator />
     <Conclusion />

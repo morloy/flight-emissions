@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Can I afford to fly?`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Airplanes cause substantial environmental damage. Could you still afford to fly if you had to pay €180 per ton of CO2 emission? Find out now!`,
+    author: `@thrstschfr`,
   },
   proxy: {
     prefix: "/api",
