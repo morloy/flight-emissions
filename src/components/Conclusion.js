@@ -1,6 +1,7 @@
 import React from "react"
 
 import { Media } from "./Media"
+import { Url } from "./Url"
 import { Image } from "./Image"
 
 export const Conclusion = () => (
@@ -24,16 +25,35 @@ export const Conclusion = () => (
         We recommend <strong>atmosfair</strong> from Germany. This calculator is
         based on their work.
       </p>
-      <p>
+      <div>
         <strong>Donate here:</strong>
-      </p>
-      <a
-        href="https://www.atmosfair.de/en/donate/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Image src="atmosfair.svg" alt="Atmosfair" />
-      </a>
+      </div>
     </Media>
+    <div className="row">
+      <div className="col">
+        <Url href="https://www.atmosfair.de/en/donate/">
+          <Image src="atmosfair.svg" alt="Atmosfair" />
+        </Url>
+      </div>
+      <div className="col">
+        <div className="row">
+          <div className="about">
+            <p>About this project</p>
+            <Url href="mailto:timo.horstschaefer@gmail.com">
+              <Image src="envelope.svg" alt="email" />
+              Give feedback
+            </Url>
+            <Url href="https://github.com/morloy/flight-emissions">
+              <Image src="github.svg" alt="GitHub" />
+              View source
+            </Url>
+            <Url href="https://twitter.com/thrstschfr">
+              <Image src="twitter.svg" alt="Twitter" />
+              Connect
+            </Url>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 )

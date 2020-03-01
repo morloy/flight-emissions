@@ -1,6 +1,7 @@
 import React from "react"
 
 import { Media } from "./Media"
+import { Url } from "./Url"
 
 export const Introduction = () => (
   <section className="introduction">
@@ -17,13 +18,9 @@ export const Introduction = () => (
       </p>
       <div className="note">
         Source:{" "}
-        <a
-          href="https://www.umweltbundesamt.de/en/press/pressinformation/high-costs-when-environmental-protection-is"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Url href="https://www.umweltbundesamt.de/en/press/pressinformation/high-costs-when-environmental-protection-is">
           Umweltbundesamt
-        </a>
+        </Url>
       </div>
     </Media>
 
