@@ -148,9 +148,10 @@ h1 {
     padding: $spacer * 3;
     border-top-left-radius: $border-radius-box;
     border-top-right-radius: $border-radius-box;
-  }
-  li {
-    margin-bottom: $spacer * 2;
+
+    li {
+      margin-bottom: $spacer * 2;
+    }
   }
   form {
     padding: $spacer * 1;
@@ -180,10 +181,13 @@ h1 {
 }
 
 .react-autosuggest__suggestions-container {
-  display: none;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: max-height 0.2s ease-out;
 }
 
 .react-autosuggest__suggestions-container--open {
+  max-height: 485px;
   display: block;
   position: absolute;
   bottom: $spacer * 3.2;
