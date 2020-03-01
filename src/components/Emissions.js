@@ -30,9 +30,9 @@ export const Emissions = ({ emissions, isLoading }) => {
   return (
     <>
       <Value label="The compensation for this roundtrip costs you" {...price} />
-      <Value label="Distance" value={distance} suffix=" km" />
+      <Value label="The traveled distance is" value={distance} suffix=" km" />
       <Value
-        label="Emissions"
+        label="Your personal carbon emission is"
         value={co2}
         suffix={
           <>
