@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Can I afford to fly?`,
-    description: `Airplanes cause substantial environmental damage. Could you still afford to fly if you had to pay €180 per ton of CO2 emission? Find out now!`,
+    description: `Airplanes cause substantial environmental damage. Could you still afford to fly if you had to pay $200 per ton of CO2 emission? Find out now!`,
     author: `@thrstschfr`,
   },
   proxy: {

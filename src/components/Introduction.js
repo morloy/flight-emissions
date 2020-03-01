@@ -14,7 +14,7 @@ export const Introduction = () => (
       </p>
       <p>
         In 2018, the German Environment Agency estimated the damage for one ton
-        of CO2 emission with a cost of €180.
+        of CO2 emission with a cost of $200.
       </p>
       <div className="note">
         Source:{" "}
@@ -35,7 +35,7 @@ export const Introduction = () => (
         don’t do it, it might be your own children.
       </p>
       <p>
-        Scroll down to learn how much flying would cost you at €180 per ton of
+        Scroll down to learn how much flying would cost you at $200 per ton of
         CO
         <sub>2</sub> 👇
       </p>
