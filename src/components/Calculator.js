@@ -23,9 +23,9 @@ export const Calculator = () => {
   const isLoading = departureId && arrivalId && !emissions
 
   return (
-    <div className="container">
+    <section className="calculator">
       <h1>Cost of Flight Emissions</h1>
-      <div className="calculator">
+      <div>
         <div className="row">
           <div className="col">
             <Image src="airplane.svg" alt="Airplane" />
@@ -40,6 +40,6 @@ export const Calculator = () => {
           setViaId={setViaId}
         />
       </div>
-    </div>
+    </section>
   )
 }

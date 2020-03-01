@@ -3,7 +3,7 @@ import React from "react"
 import { Media } from "./Media"
 
 export const Introduction = () => (
-  <div className="container">
+  <section className="introduction">
     <h1>Can I afford to fly?</h1>
     <Media image="world.svg" alt="Connected world">
       <p>
@@ -43,5 +43,5 @@ export const Introduction = () => (
         <sub>2</sub> 👇
       </p>
     </Media>
-  </div>
+  </section>
 )

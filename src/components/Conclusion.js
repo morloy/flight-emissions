@@ -4,7 +4,7 @@ import { Media } from "./Media"
 import { Image } from "./Image"
 
 export const Conclusion = () => (
-  <div className="container conclusion">
+  <section className="conclusion">
     <h1>What now?</h1>
     <Media image="savings.svg" alt="Savings" large reverse>
       <p>
@@ -35,5 +35,5 @@ export const Conclusion = () => (
         <Image src="atmosfair.svg" alt="Atmosfair" />
       </a>
     </Media>
-  </div>
+  </section>
 )
