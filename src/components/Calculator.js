@@ -5,8 +5,6 @@ import { getFlightEmissions } from "./lib/flightEmissions"
 import { EmissionForm } from "./EmissionForm"
 import { Image } from "./Image"
 
-const Loader = () => <div>Loading…</div>
-
 export const Calculator = () => {
   const [departureId, setDepartureId] = useState("")
   const [arrivalId, setArrivalId] = useState("")
@@ -22,6 +20,8 @@ export const Calculator = () => {
     getFlightEmissions(legs).then(res => setEmissions(res))
   }, [departureId, viaId, arrivalId])
 
+  const isLoading = departureId && arrivalId && !emissions
+
   return (
     <div className="container">
       <h1>Cost of Flight Emissions</h1>
@@ -31,8 +31,7 @@ export const Calculator = () => {
             <Image src="airplane.svg" alt="Airplane" />
           </div>
           <div className="emissions col">
-            {departureId && arrivalId && !emissions && <Loader />}
-            {emissions && <Emissions {...emissions} />}
+            <Emissions emissions={emissions} isLoading={isLoading} />
           </div>
         </div>
         <EmissionForm
