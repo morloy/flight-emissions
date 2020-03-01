@@ -1,4 +1,5 @@
 $font-size: 1.3rem;
+$font-size-small: $font-size * 0.8;
 $font-family: Raleway;
 $font-family-emph: "Fredoka One";
 $spacer: 1rem;
@@ -11,12 +12,26 @@ $color-background: #fbf3f0;
 $border-radius: 1rem;
 $border-radius-box: $border-radius * 2;
 
+@mixin phone {
+  @media (max-width: 799px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
 html,
 body {
-  height: 100vh;
-  overflow: hidden;
   padding: 0;
   margin: 0;
+  @include desktop {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 body,
@@ -31,16 +46,20 @@ a {
 }
 
 main {
-  overflow: scroll;
-  height: 100vh;
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y mandatory;
+  @include desktop {
+    height: 100vh;
+    overflow: scroll;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+  }
 }
 section {
-  height: 100vh;
+  @include desktop {
+    height: 100vh;
+    scroll-snap-align: start;
+  }
   max-width: 1100px;
-  scroll-snap-align: start;
   position: relative;
 
   margin-left: auto;
@@ -53,14 +72,6 @@ img {
   margin: auto;
 }
 
-footer {
-  display: none;
-  background-color: $color-background;
-  text-align: center;
-  padding: $spacer * 0.5;
-  font-size: $font-size * 0.8;
-}
-
 h1 {
   font-size: $font-size * 2;
   font-family: $font-family-emph;
@@ -69,13 +80,17 @@ h1 {
   padding-bottom: $spacer * 2;
 }
 .note {
-  font-size: $font-size * 0.8;
+  font-size: $font-size-small;
 }
 
 .row {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include phone {
+    display: block;
+  }
 }
 .col {
   flex: 1;
@@ -90,7 +105,7 @@ h1 {
 }
 
 .media img {
-  width: 60%;
+  max-width: 300px;
 }
 
 .introduction {
@@ -140,9 +155,11 @@ h1 {
   form {
     padding: $spacer * 1;
     background-color: $color-background;
-    border-top-left-radius: $border-radius-box;
     border-bottom-left-radius: $border-radius-box;
-    border-bottom-right-radius: $border-radius-box;
+    border-top-left-radius: $border-radius-box;
+    @include phone {
+      border-top-left-radius: 0;
+    }
   }
 }
 
@@ -205,17 +222,21 @@ h1 {
   }
   .media img {
     width: 100%;
+    max-width: 500px;
   }
   a img {
     padding-top: $spacer * 2;
-    width: 70%;
+    max-width: 300px;
   }
 
   .about {
     padding: $spacer * 2 $spacer * 3;
     border-radius: $border-radius-box;
     background-color: $color-background;
-    font-size: $font-size * 0.8;
+    font-size: $font-size-small;
+    @include phone {
+      margin-top: $spacer * 2;
+    }
 
     p {
       margin-top: 0;
@@ -226,12 +247,13 @@ h1 {
       padding-top: 0;
       .image {
         display: inline-block;
-        width: $font-size * 1.1;
+        width: $font-size-small;
         height: $font-size * 0.65;
-        margin-right: $spacer * 0.8;
+        margin-right: $font-size-small;
         color: $color-text;
         img {
           padding: 0;
+          width: 100%;
         }
       }
       display: block;
