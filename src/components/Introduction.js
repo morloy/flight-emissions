@@ -6,7 +6,7 @@ import { price } from "./lib"
 
 export const Introduction = () => (
   <section className="introduction">
-    <h1>Can I afford to fly?</h1>
+    <h1>Can I Afford to fly?</h1>
     <Media image="world.svg" alt="Connected world">
       <p>
         Airplanes require a large amount of energy to fly. They use fossil fuels
@@ -14,8 +14,12 @@ export const Introduction = () => (
         environmental damage.
       </p>
       <p>
-        In 2018, the German Environment Agency estimated the damage for one ton
-        of CO2 emission with a cost of {price}.
+        In 2018, the German Environment Agency estimated the damage of
+        greenhouse gas emissions at cost of{" "}
+        <strong>
+          {price} per ton of CO<sub>2</sub>
+        </strong>
+        .
       </p>
       <div className="note">
         Source:{" "}

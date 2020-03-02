@@ -143,11 +143,13 @@ h1 {
 
   .emissions {
     font-size: $font-size * 1.2;
-    height: $spacer * 17;
     background-color: $color-background;
-    padding: $spacer * 3;
     border-top-left-radius: $border-radius-box;
     border-top-right-radius: $border-radius-box;
+    @include desktop {
+      height: $spacer * 17;
+      padding: $spacer * 3;
+    }
 
     li {
       margin-bottom: $spacer * 2;

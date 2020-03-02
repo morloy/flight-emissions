@@ -6,7 +6,7 @@ import { Image } from "./Image"
 
 export const Conclusion = () => (
   <section className="conclusion">
-    <h1>What now?</h1>
+    <h1>What Now?</h1>
     <Media image="savings.svg" alt="Savings" large reverse>
       <p>
         <strong>It is up to you to take action now.</strong>

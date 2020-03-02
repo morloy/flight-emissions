@@ -24,11 +24,11 @@ export const Calculator = () => {
 
   return (
     <section className="calculator">
-      <h1>Cost of Flight Emissions</h1>
+      <h1>The True Cost of Flying</h1>
       <div>
         <div className="row">
           <div className="col">
-            <Image src="airplane.svg" alt="Airplane" />
+            <Image src="journey.svg" alt="Airplane" />
           </div>
           <div className="emissions col">
             <Emissions emissions={emissions} isLoading={isLoading} />
