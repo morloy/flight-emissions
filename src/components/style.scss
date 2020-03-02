@@ -146,9 +146,14 @@ h1 {
     background-color: $color-background;
     border-top-left-radius: $border-radius-box;
     border-top-right-radius: $border-radius-box;
+    padding-bottom: $spacer;
     @include desktop {
-      height: $spacer * 17;
+      height: $spacer * 13;
       padding: $spacer * 3;
+    }
+
+    ol {
+      margin-bottom: 0;
     }
 
     li {
