@@ -3,6 +3,7 @@ module.exports = {
     title: `Can I afford to fly?`,
     description: `Airplanes cause substantial environmental damage. Could you still afford to fly if you had to pay $200 per ton of CO2 emission? Find out now!`,
     author: `@thrstschfr`,
+    image: "https://flight-emissions.com/icons/icon-512x512.png",
   },
   proxy: {
     prefix: "/api",

@@ -11,6 +11,7 @@ export const SEO = ({ description, lang }) => {
             title
             description
             author
+            image
           }
         }
       }
@@ -18,7 +19,7 @@ export const SEO = ({ description, lang }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const { title } = site.siteMetadata
+  const { title, image } = site.siteMetadata
 
   return (
     <Helmet
@@ -45,6 +46,10 @@ export const SEO = ({ description, lang }) => {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: image,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -59,6 +64,10 @@ export const SEO = ({ description, lang }) => {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: image,
         },
       ]}
     />
