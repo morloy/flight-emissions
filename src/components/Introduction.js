@@ -6,7 +6,7 @@ import { price } from "./lib"
 
 export const Introduction = () => (
   <section className="introduction">
-    <h1>Can I Afford to fly?</h1>
+    <h1>Flight Emissions — Can I Afford to fly?</h1>
     <Media image="world.svg" alt="Connected world">
       <p>
         Airplanes require a large amount of energy to fly. They use fossil fuels

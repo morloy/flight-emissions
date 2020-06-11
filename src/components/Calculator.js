@@ -24,7 +24,7 @@ export const Calculator = () => {
 
   return (
     <section className="calculator">
-      <h1>The True Cost of Flying</h1>
+      <h2>The Cost of Flying</h2>
       <div>
         <div className="row">
           <div className="col">
